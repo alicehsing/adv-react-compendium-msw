@@ -1,0 +1,16 @@
+html,
+body,
+#root,
+.App {
+  background-color: rgb(119, 161, 138);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  color: rgb(161, 240, 213);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
