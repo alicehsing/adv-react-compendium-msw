@@ -26,6 +26,7 @@ export default function FuturamaList() {
   useEffect(() => {
     const getQuotes = async () => {
       const futuramaData = await futuramaFetch();
+      console.log(futuramaData);
       setQuotes(futuramaData);
       setLoading(false);
     };
