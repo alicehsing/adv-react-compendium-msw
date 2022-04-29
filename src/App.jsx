@@ -6,7 +6,7 @@ export default function App() {
   return (
     <Switch>
       <Route path="/">
-        <h1>Futurama Quotes Compendium</h1>
+        <h1>Futurama Compendium</h1>
         <FuturamaList />
       </Route>
     </Switch>
