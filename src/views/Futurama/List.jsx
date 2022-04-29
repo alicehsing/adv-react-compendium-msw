@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from '../../App.css';
+import CharacterCard from '../../components/Card';
 
 export default function FuturamaList() {
   // set state
@@ -15,7 +16,7 @@ export default function FuturamaList() {
     setIsSearching(!!search.length);
     setSearch(event.target.value);
     const searchResults = quotes.filter(
-      (item) => item.name.includes(search.toLowerCase().trim())
+      (item) => item.name.toLowerCase().includes(search.toLowerCase().trim())
       // item.name.includes(event.target.value.toLowerCase().trim())
     );
     setResults(searchResults);
@@ -50,33 +51,31 @@ export default function FuturamaList() {
       ) : (
         <>
           {/* <search onSearch={handleSearch} /> */}
-          <div>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="character-quote">
-                Search quotes by character:
-              </label>
-              <input
-                id="search"
-                type="text"
-                value={search}
-                onChange={handleSearch}
-              />
-              <button disabled={!search}>Search</button>
-            </form>
+          <div className={styles.list}>
+            {/* <label htmlFor="character-quote">Search quotes by character:</label> */}
+            <input
+              id="search"
+              type="text"
+              value={search}
+              placeholder="Search quotes by character"
+              onChange={handleSearch}
+            />
           </div>
-          {quoteList.map((quote) => {
-            return (
-              <>
-                <div className={styles.item}>
-                  <h3>
-                    {quote.name}: "{quote.quote}"
-                  </h3>
-
-                  <img alt="character" src={quote.image} />
-                </div>
-              </>
-            );
-          })}
+          <div>
+            {quoteList.map((quote) => {
+              return (
+                <>
+                  <div>
+                    <CharacterCard
+                      name={quote.name}
+                      image={quote.image}
+                      quote={quote.quote}
+                    />
+                  </div>
+                </>
+              );
+            })}
+          </div>
           {isSearching && !results.length && <p>No results</p>}
         </>
       )}
