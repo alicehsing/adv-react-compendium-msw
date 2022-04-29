@@ -4,8 +4,8 @@ export default function CharacterCard({ name, image, quote }) {
   return (
     <>
       <div className={styles.item}>
-        <h3>
-          {name}: "{quote}"
+        <h3 aria-level="3">
+          {name}:"{quote}"
         </h3>
         <img alt="character" src={image} />
       </div>
