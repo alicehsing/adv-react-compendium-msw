@@ -39,7 +39,6 @@ describe('List', () => {
 
     // // type the word "Fry" into the search input
     userEvent.type(searchInput, 'Fry');
-    screen.debug();
 
     // // check that only "Fry" quotes render
     waitFor(() => {
@@ -47,5 +46,14 @@ describe('List', () => {
       expect(result).toHaveLength(2);
       expect(result.textContent).toEqual('Fry');
     });
+  });
+
+  test('should render the header - component test', async () => {
+    render(<List />);
+
+    await waitForElementToBeRemoved(screen.getByText(/loading.../i));
+    const header = await screen.findByText(/Futurma Characters & Quotes/i);
+    expect(header).toBeInTheDocument();
+    screen.debug();
   });
 });

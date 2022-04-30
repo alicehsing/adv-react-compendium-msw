@@ -26,7 +26,6 @@ export default function FuturamaList() {
   useEffect(() => {
     const getQuotes = async () => {
       const futuramaData = await futuramaFetch();
-      console.log(futuramaData);
       setQuotes(futuramaData);
       setLoading(false);
     };
@@ -35,11 +34,14 @@ export default function FuturamaList() {
 
   return (
     <>
-      <h2>Futurma Characters & Quotes</h2>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <>
+          <header>
+            <h2>Futurma Characters & Quotes</h2>
+          </header>
+
           {/* <search onSearch={handleSearch} /> */}
           <div className={styles.list}>
             {/* <label htmlFor="character-quote">Search quotes by character:</label> */}
