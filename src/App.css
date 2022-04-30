@@ -2,11 +2,19 @@ html,
 body,
 #root,
 .App {
-  background-color: rgb(119, 161, 138);
+  /* background-image: url('https://aws1.discourse-cdn.com/pocketgems/uploads/episodeinteractive/optimized/4X/5/8/5/585e757b68a6e0b597f4dbea52ee9564a0c83ddf_2_690x388.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: black;
   text-align: center;
   height: 100%;
   width: 100%;
   justify-content: space-around;
+}
+
+header {
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {

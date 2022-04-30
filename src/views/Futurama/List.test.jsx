@@ -52,8 +52,9 @@ describe('List', () => {
     render(<List />);
 
     await waitForElementToBeRemoved(screen.getByText(/loading.../i));
-    const header = await screen.findByText(/Futurma Characters & Quotes/i);
+    const header = await screen.findByText(
+      /Can't get enough Futurma!!! See what the characters have to say!/i
+    );
     expect(header).toBeInTheDocument();
-    screen.debug();
   });
 });

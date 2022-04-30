@@ -39,7 +39,10 @@ export default function FuturamaList() {
       ) : (
         <>
           <header>
-            <h2>Futurma Characters & Quotes</h2>
+            <h2>
+              Can't get enough Futurma!!! <br></br>See what the characters have
+              to say!
+            </h2>
           </header>
 
           {/* <search onSearch={handleSearch} /> */}
