@@ -7,7 +7,7 @@ import {
 import userEvent from '@testing-library/user-event';
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
-import { futuramaApiData } from '../../tests/futuramaData';
+import { futuramaApiData } from '../../tests/fixtures/futuramaData';
 import List from './List';
 
 const server = setupServer(
