@@ -1,0 +1,56 @@
+html,
+body,
+#root,
+.App {
+  /* background-image: url('https://aws1.discourse-cdn.com/pocketgems/uploads/episodeinteractive/optimized/4X/5/8/5/585e757b68a6e0b597f4dbea52ee9564a0c83ddf_2_690x388.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: black;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+header {
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+  color: rgb(161, 240, 213);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.list {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+
+.list input {
+  width: 250px;
+  height: 30px;
+  border-style: groove;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 600px;
+  height: 350px;
+  border-radius: 5%;
+  background-color: rgb(234, 224, 208);
+}
+
+.item img {
+  width: 200px;
+  height: 250px;
+}
+
+.item h3 {
+  width: 500px;
+}
